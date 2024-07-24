@@ -1,10 +1,10 @@
 resource "aws_instance" "instance1" {
-  ami                         = "ami-0b72821e2f351e396"
-  instance_type               = "t2.small"
+  ami                         = "ami-03972092c42e8c0ca"
+  instance_type               = "t2.micro"
   count                       = 1
-  key_name                    = "test"
-  vpc_security_group_ids     = ["sg-01aaac6b43fd22d1a"]
-  subnet_id                   = "subnet-0cc0342d26fbf33b4"
+  key_name                    = "kohli"
+  vpc_security_group_ids     = ["sg-0640ac226b79673e7"]
+  subnet_id                   = "subnet-001dafb658ac7d5b2"
   associate_public_ip_address = true
   user_data                   = "${file("data.sh")}"
 
